@@ -1,0 +1,333 @@
+img {
+  width: 50px;
+}
+body {
+  margin: 0px;
+}
+body header {
+  background-color: #71a6d2;
+  color: white;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+body header .contents {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+body header .contents .right {
+  float: right;
+}
+body header .contents .search_box {
+  margin-left: 10px;
+  background-color: #aecce5;
+  border: solid 1px #aecce5;
+}
+body header a {
+  text-decoration: none;
+  color: white;
+}
+body .min_title {
+  background-color: #fafbfc;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+body .min_title img {
+  top: 15px;
+  position: relative;
+}
+body .search_form {
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+body .container {
+  margin-left: auto;
+  margin-right: auto;
+}
+body .container pre {
+  background-color: #1d2124;
+  color : #bff4ff;
+}
+body .container pre code {
+  margin: 4px;
+}
+body .login_page .login_form {
+  background-color: white;
+  width: 340px;
+  margin: 30px auto 0 auto;
+  padding: 20px;
+  border: 1px solid #d8dee2;
+  border-radius: 5px;
+  border-top: 1px solid #d8dee2;
+}
+body .login_page .login_form input {
+  width: 100%;
+  min-height: 30px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+body .login_page .login_form .radio_input {
+  width: auto;
+}
+body .login_page .login_form button {
+  line-height: 20px;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 12px;
+  color: white;
+  background-color: #269f42;
+  background-image: linear-gradient(-180deg, #2fcb53, #269f42 90%);
+  background-position: -0.5em;
+  border-color: rgba(27, 31, 35, .5);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+body .create_form_container {
+  margin: 30px auto 0 auto;
+}
+body .create_form_container h1 {
+  border-bottom: 1px solid #e1e4e8;
+  width: 100%;
+  padding-bottom: 8px;
+  margin-bottom: 30px;
+}
+body .create_form_container .subscript {
+  font-size: 14px;
+  color: #586069;
+  font-weight: normal;
+}
+body .create_form_container .submit {
+  line-height: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 12px;
+  color: white;
+  background-color: #269f42;
+  background-image: linear-gradient(-180deg, #2fcb53, #269f42 90%);
+  background-position: -0.5em;
+  border-color: rgba(27, 31, 35, .5);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.profile_box {
+  margin-top: 24px;
+}
+.profile_box .profile_img {
+  width: 230px;
+}
+.profile_box .profile {
+  width: 25%;
+  float: left;
+  padding-right: 16px;
+}
+.profile_box .post_report {
+  float: left;
+}
+.profile_box .report_list {
+  margin-top: 10px;
+}
+.profile_box .report {
+  margin: 5px;
+  width: 300px;
+  border: solid 1px #e1e4e8;
+  background-color: white;
+  padding: 10px;
+  display: inline-block;
+  font-size: 12px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.inline {
+  display: inline-block;
+}
+.search_box {
+  min-height: 30px;
+  width: 300px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.report {
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+.report img {
+  margin-top: -10px;
+}
+.report .info {
+  font-size: 12px;
+}
+.report .info img {
+  width: 12px;
+  position: relative;
+  top: 3px;
+}
+.report .info .post_user {
+  margin-right: 10px;
+}
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+.text-gray {
+  color: #586069;
+}
+p {
+  margin-top: 0;
+}
+.input_template, .input_template_max {
+  min-height: 20px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fafbfc;
+}
+.input_template_max {
+  width: 100%;
+}
+.comment {
+  margin: 15px 0;
+}
+.readonly {
+  background-color: #a6aba1;
+}
+.pagination {
+  padding-bottom: 12px;
+  padding-top: 12px;
+  font-size: 0;
+}
+.pagination li {
+  border: solid 1px #e1e4e8;
+  background-color: white;
+  padding: 10px;
+  display: inline-block;
+  font-size: 12px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.pagination li a {
+  text-decoration: none;
+  color: blue;
+  display: block;
+  width: 100%;
+}
+.pagination .disabled {
+  background-color: #e1e4e8;
+}
+.pagination .active {
+  background-color: #96dbb4;
+}
+.pagination li:not(.active):not(.disabled):hover {
+  background-color: #eee;
+}
+.btn-download {
+  padding: 5px;
+  width: 100%;
+  background-color: #689f38;
+  color: white;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+.btn-download a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+.btn-download:hover {
+  background-color: #78af48;
+}
+.label {
+  font-weight: bold;
+}
+.head {
+  margin-bottom: 5px;
+}
+.title.inline {
+  display: block;
+  float: left;
+}
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  line-height: 1.5;
+}
+table th {
+  width: 150px;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  background: #3f3f3f;
+  color: #fff;
+}
+table.type06 td {
+  width: 350px;
+  padding: 10px;
+  vertical-align: top;
+}
+tr:nth-child(even) {
+  background: #d9d9d9;
+}
+/* PCの時 */@media all and (min-width: 980px) {
+  body {
+    /* PCの時はスマホ用ヘッダーをhide */
+  }
+  body .container {
+    width: 980px;
+  }
+  body .post_report {
+    width: 70%;
+  }
+  body .create_form_container {
+    width: 700px;
+  }
+  body .nav_phone, body #hamburger {
+    display: none;
+  }
+  body .nav_pc {
+    display: block;
+  }
+}
+/* スマホの時 */@media not all and (min-width: 980px) {
+  .nav_pc, .nav_phone, .pc_search {
+    display: none;
+  }
+  .nav_phone div:not(.inline) {
+    border-bottom: 1px solid #ccc;
+  }
+  #hamburger {
+    height: 24px;
+    width: 24px;
+    margin: 0 0 0 auto;
+    border: 1px solid white;
+    padding: 4px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
+  #hamburger div {
+    border-top: 3px solid white;
+    position: relative;
+  }
+  #hamburger #line2 {
+    top: 8px;
+  }
+  #hamburger #line3 {
+    top: 16px;
+  }
+  .profile_box .profile {
+    width: auto;
+  }
+}
