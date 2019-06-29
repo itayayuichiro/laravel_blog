@@ -13,7 +13,10 @@ class ContentsController extends Controller
      * トップページ
      */
     public function index(){
-
+        $contents = Contents::findAll();
+        return view('contents.index', [
+            'contents' => $contents
+        ]);
     }
     /**
      * 記事ページ

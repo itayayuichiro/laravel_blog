@@ -36,7 +36,7 @@
         </div>
         <div class="inline pc_search">
             <form action="{{ action('ContentsController@search') }}" method="GET">
-                <input type="text" class="search_box" name="keyword" placeholder="例)データマイニング"
+                <input type="text" class="search_box" name="keyword" placeholder="例)Laravel"
                        value="">
             </form>
         </div>
