@@ -3,6 +3,7 @@ img {
 }
 
 body {
+  word-wrap: break-word;
   margin: 0px;
   header {
     background-color: #71a6d2;
@@ -43,13 +44,11 @@ body {
   .container {
     margin-left: auto;
     margin-right: auto;
-    //width: 980px;
     pre{
       background-color: #1d2124;
       color : #bff4ff;
-      code{
-        margin: 4px;
-      }
+      padding: 4px;
+      overflow: scroll;
     }
   }
   .login_page {

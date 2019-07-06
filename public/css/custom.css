@@ -2,6 +2,7 @@ img {
   width: 50px;
 }
 body {
+  word-wrap: break-word;
   margin: 0px;
 }
 body header {
@@ -47,9 +48,8 @@ body .container {
 body .container pre {
   background-color: #1d2124;
   color : #bff4ff;
-}
-body .container pre code {
-  margin: 4px;
+  padding: 4px;
+  overflow: scroll;
 }
 body .login_page .login_form {
   background-color: white;

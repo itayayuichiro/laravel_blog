@@ -7,7 +7,7 @@
 
     <div class="min_title">
         <div class="container">
-            <h1 class="inline">
+            <h1 style="margin-top: 0px;padding-top: 10px;">
                 {{ $content->title }}
             </h1>
         </div>
