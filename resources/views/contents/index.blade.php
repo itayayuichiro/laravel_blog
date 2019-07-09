@@ -27,5 +27,6 @@
                 </div>
             @endforeach
         </div>
+        {{ $contents->links() }}
     </div>
 @endsection

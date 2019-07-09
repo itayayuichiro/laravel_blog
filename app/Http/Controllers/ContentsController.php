@@ -13,7 +13,7 @@ class ContentsController extends Controller
      * トップページ
      */
     public function index(){
-        $contents = Contents::findAll();
+        $contents = Contents::paginate(10);
         return view('contents.index', [
             'contents' => $contents
         ]);
