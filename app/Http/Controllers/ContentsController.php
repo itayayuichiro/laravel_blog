@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -27,9 +28,11 @@ class ContentsController extends Controller
     public function show($id)
     {
         $content = Contents::findRecord($id);
+        $tags = Tag::where('content_id', $id)->get();
 
         return view('contents.show', [
-            'content' => $content
+            'content' => $content,
+            'tags' => $tags
         ]);
     }
 

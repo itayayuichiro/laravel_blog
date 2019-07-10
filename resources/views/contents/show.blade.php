@@ -10,6 +10,11 @@
             <h1 style="margin-top: 0px;padding-top: 10px;">
                 {{ $content->title }}
             </h1>
+            <span>
+                @foreach ($tags as $tag)
+                    <a href="#">#{{ $tag->name }}</a>
+                @endforeach
+            </span>
         </div>
     </div>
 
