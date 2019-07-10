@@ -27,5 +27,5 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ];
             then
-              ssh ${USER_NAME}@${HOST_NAME} command cd www/blog/; ls -lt
+              ssh ${USER_NAME}@${HOST_NAME} command cd www/blog/; git pull origin master
             fi
