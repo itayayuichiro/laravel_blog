@@ -22,6 +22,8 @@
         <p>
             <?= $content->html ?>
         </p>
+        <hr />
+        <h4>SNSでシェア</h4>
         <div class="sns_share">
             <script>
                 var url = location.href;
