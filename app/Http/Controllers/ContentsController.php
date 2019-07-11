@@ -29,9 +29,10 @@ class ContentsController extends Controller
     {
         $content = Contents::findRecord($id);
         $tags = Tag::where('content_id', $id)->get();
-
+        $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
         return view('contents.show', [
             'content' => $content,
+            'url' => $url,
             'tags' => $tags
         ]);
     }

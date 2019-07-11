@@ -1,7 +1,6 @@
 @extends('layouts.app')
-@section('title')
-    {{ $content->title }}
-@endsection
+@section('title'){{ $content->title }}@endsection
+@section('url'){{ $url }}@endsection
 
 @section('content')
 
@@ -25,14 +24,8 @@
         <hr />
         <h4>SNSでシェア</h4>
         <div class="sns_share">
-            <script>
-                var url = location.href;
-                document.write(
-                  '<a href="http://www.facebook.com/share.php?u='+url+'" rel="nofollow" target="_blank" class="fa fa-facebook"></a>' +
-                  ' <a href="https://twiter.com/share?url='+url+'" target="_blank" class="fa fa-twitter"></a>'
-                );
-            </script>
-
+            <a href="http://www.facebook.com/share.php?u=<?= $url ?>" rel="nofollow" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/share?url=<?= $url ?>&text=<?= $content->title ?>" target="_blank" class="fa fa-twitter"></a>
         </div>
     </div>
 @endsection
