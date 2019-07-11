@@ -22,5 +22,15 @@
         <p>
             <?= $content->html ?>
         </p>
+        <div class="sns_share">
+            <script>
+                var url = location.href;
+                document.write(
+                  '<a href="http://www.facebook.com/share.php?u='+url+'" rel="nofollow" target="_blank" class="fa fa-facebook"></a>' +
+                  ' <a href="https://twiter.com/share?url='+url+'" target="_blank" class="fa fa-twitter"></a>'
+                );
+            </script>
+
+        </div>
     </div>
 @endsection
