@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contents extends Model
 {
-    protected $fillable = ['title', 'html'];
+    protected $fillable = ['title', 'html', 'category_id','bg_image'];
 
     public static function findAll()
     {

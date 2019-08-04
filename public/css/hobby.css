@@ -1,0 +1,145 @@
+h1 img {
+  width: 50px;
+}
+body {
+  margin: 0px;
+}
+body header {
+  position: relative;
+  height: 72px;
+}
+body header .contents {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 72px;
+  padding: 0 20px 0 20px;
+}
+body header .title a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+body header .title a img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+body .article {
+  background: #f2f2f2;
+}
+body .article div img {
+  max-width: 80%;
+}
+body .container {
+  margin: 0 auto;
+  background: white;
+  position: relative;
+  margin-top: -30px;
+  padding: 0 20px;
+}
+body .bg-header {
+  background-size: cover;
+  position: relative;
+}
+body .bg-header .header_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body .bg-header .head_title {
+  text-align: center;
+  line-height: 1.4;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 80%;
+  height: 3.2rem;
+  color: white;
+  font-weight: 700;
+}
+.inline {
+  display: inline-block;
+}
+/* PCの時 */@media all and (min-width: 980px) {
+  body {
+    /* PCの時はスマホ用ヘッダーをhide */
+  }
+  body .bg-header {
+    min-height: 458px;
+    font-size: 42px;
+  }
+  body .container {
+    width: 800px;
+  }
+  body .post_report {
+    width: 70%;
+  }
+  body .create_form_container {
+    width: 700px;
+  }
+  body .nav_phone, body #hamburger {
+    display: none;
+  }
+  body .nav_pc {
+    display: block;
+  }
+}
+/* スマホの時 */@media not all and (min-width: 980px) {
+  .nav_pc, .nav_phone, .pc_search {
+    display: none;
+  }
+  .contents {
+    text-align: center;
+  }
+  .bg-header {
+    min-height: 184px;
+    font-size: 20px;
+  }
+  #hamburger {
+    height: 24px;
+    width: 24px;
+    margin: 0 0 0 auto;
+    border: 1px solid white;
+    padding: 4px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
+  #hamburger div {
+    border-top: 3px solid white;
+    position: relative;
+  }
+  #hamburger #line2 {
+    top: 8px;
+  }
+  #hamburger #line3 {
+    top: 16px;
+  }
+  .profile_box .profile {
+    width: auto;
+  }
+}
+/* ソーシャルボタン */.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+/* Add a hover effect if you want */.fa:hover {
+  opacity: 0.7;
+}
+/* Set a specific color for each brand *//* Facebook */.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+/* Twitter */.fa-twitter {
+  background: #55acee;
+  color: white;
+}

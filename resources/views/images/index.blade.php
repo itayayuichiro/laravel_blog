@@ -11,3 +11,8 @@
         <p>{{ asset('storage/' . $image->path) }}</p>
     @endforeach
 @endsection
+<style>
+    img{
+        width:400px;
+    }
+</style>
