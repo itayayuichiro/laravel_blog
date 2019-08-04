@@ -32,6 +32,14 @@ body .article {
 body .article div img {
   max-width: 80%;
 }
+body .article h2 {
+  border-left: 4px groove #8459ec;
+  padding-left: 10px;
+}
+body .article h3 {
+  border-left: 3px solid purple;
+  padding-left: 10px;
+}
 body .container {
   margin: 0 auto;
   background: white;
