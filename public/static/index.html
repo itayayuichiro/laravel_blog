@@ -1,0 +1,57 @@
+<html>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="theme-color" content="#ffffff">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="Access-Control-Allow-Methods" content="GET">
+  <meta http-equiv="Access-Control-Allow-Headers" content="*">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <link href="./sass/hotaru.css"  rel="stylesheet" type="text/css"></link>
+  
+  <body>
+      <audio loop id='bgm_sound' preload="auto" src="./audio/bgm.mp3" type="audio/mp3"></audio>
+      <audio id='sound' preload="auto" src="./audio/1.mp3" type="audio/mp3"></audio>
+      <audio id='load_sound' preload="auto" src="./audio/0.mp3" type="audio/mp3" onended="bgm_play()"></audio>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+  </body>
+  <script>
+    function bgm_play () {
+      document.getElementById('bgm_sound').play();
+      document.getElementById('bgm_sound').volume = 0.1;
+    }
+    var count = 0;
+    $(function () {
+      $('body').on('click', function(){
+        if (count == 0) {
+          document.getElementById('load_sound').play();
+        } else if(count == 10) {
+          document.getElementById('load_sound').src="./audio/10.mp3";
+          document.getElementById('load_sound').play();
+        } else {
+          var random = Math.floor( Math.random() * 7 ) + 1;
+          document.getElementById('load_sound').src="./audio/"+random+".mp3";
+          document.getElementById('load_sound').play();
+        }
+        count++;
+      });
+    });
+    document.querySelector('body').click();  
+  </script>
+</html>

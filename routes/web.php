@@ -6,3 +6,7 @@ Route::post('/upload', 'ImagesController@uploadImage')->name('contents.uploadIma
 Route::get('/search', 'ContentsController@search')->name('contents.search');
 Route::get('/', 'ContentsController@index')->name('contents.index');
 Route::get('/{id}', 'ContentsController@show')->name('contents.show');
+
+Route::get('/static/tourabu', function () {
+  return \File::get(public_path() . '/static/index.html');
+});
