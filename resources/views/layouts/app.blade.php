@@ -7,6 +7,7 @@
     <meta name="twitter:card" content="summary" />
     <meta property="og:url" content="@yield('url')" />
     <meta property="og:title" content="@yield('title')" />
+    <meta property="og:description" content="記事の要約（ディスクリプション）" />
     <meta property="og:image" content="{{ asset('/img/card_image.jpg') }}" />
 
     <!-- CSRF Token -->
