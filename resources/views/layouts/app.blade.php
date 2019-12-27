@@ -18,15 +18,15 @@
     </title>
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75418628-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75418628-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'UA-75418628-3');
-</script>
+      gtag('config', 'UA-75418628-3');
+    </script>
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
@@ -57,12 +57,12 @@
                        value="">
             </form>
         </div>
-
-        <div id="hamburger">
+        <div id="ham"></div>
+        {{-- <div id="hamburger">
             <div id="line1"></div>
             <div id="line2"></div>
             <div id="line3"></div>
-        </div>
+        </div> --}}
 
         <nav class="nav_phone">
             <div class="inline">

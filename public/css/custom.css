@@ -314,6 +314,10 @@ tr:nth-child(even) {
   .nav_phone div:not(.inline) {
     border-bottom: 1px solid #ccc;
   }
+  #ham {
+    height: 24px;
+    width: 24px;
+  }
   #hamburger {
     height: 24px;
     width: 24px;

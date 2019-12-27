@@ -28,19 +28,42 @@ class ContentsController extends Controller
     public function show($id)
     {
         $content = Contents::findRecord($id);
-        $tags = Tag::where('content_id', $id)->get();
+        $content_tags = Tag::where('content_id', $id)->get();
+        // 関連記事(同じタグの)を取得
+        
+        // 同じタグの記事IDを取得
+        $tag_query = null;
+        foreach ($content_tags as $key => $content_tag) {
+          if($key === 0){
+            $tag_query = Tag::where('name', 'LIKE',"%" . $content_tag->name . "%");
+          }else{
+            $tag_query = $tag_query->orWhere('name', 'LIKE',"%" . $content_tag->name . "%");
+          }
+        }
+        $relation_contents = [];
+        if($tag_query !== null){
+          $tags = $tag_query->get();
+          $content_ids = [];
+          foreach ($tags as &$tag) {
+            if($tag->content_id !== $content->id){
+              array_push($content_ids,$tag->content_id);
+            }
+          }
+          $relation_contents = Contents::whereIn('id', $content_ids)->paginate(3);
+        }
         $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
         if ($content->category_id === 1) {
             return view('contents.show', [
                 'content' => $content,
                 'url' => $url,
-                'tags' => $tags
+                'tags' => $content_tags,
+                'relation_contents' => $relation_contents
             ]);
         } else {
             return view('contents.anime', [
                 'content' => $content,
                 'url' => $url,
-                'tags' => $tags
+                'tags' => $content_tags
             ]);
         }
     }
@@ -66,16 +89,4 @@ class ContentsController extends Controller
       }
       return view('contents.index', compact('contents'));
     }
-
-    /**
-     * タグ検索機能
-     */
-    public function tag_search(Request $request)
-    {
-        $contents = Contents::where('title', 'LIKE', "%" . $request->keyword . "%")->orWhere('html', 'LIKE', "%" . $request->keyword . "%")
-            ->paginate(10);
-        return view('contents.index', compact('contents'));
-    }
-
-    
 }

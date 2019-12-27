@@ -28,4 +28,13 @@
             <a href="https://twitter.com/share?url=<?= $url ?>&text=<?= $content->title ?>" target="_blank" class="fa fa-twitter"></a>
         </div>
     </div>
+
+    <div class="container">
+      <h4>関連記事</h4>
+      @foreach ($relation_contents as $relation_content)
+        <span>
+          <?= $relation_content->title ?>
+        </span>
+      @endforeach
+    </div>
 @endsection
