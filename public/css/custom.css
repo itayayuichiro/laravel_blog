@@ -212,7 +212,6 @@ p {
 .pagination li {
   border: solid 1px #e1e4e8;
   background-color: white;
-  padding: 10px;
   display: inline-block;
   font-size: 12px;
   -moz-border-radius: 3px;
@@ -224,6 +223,11 @@ p {
   color: blue;
   display: block;
   width: 100%;
+  padding: 10px;
+}
+.pagination li span{
+  display: block;
+  padding: 10px;
 }
 .pagination .disabled {
   background-color: #e1e4e8;
