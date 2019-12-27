@@ -32,9 +32,13 @@
     <div class="container">
       <h4>関連記事</h4>
       @foreach ($relation_contents as $relation_content)
-        <span>
-          <?= $relation_content->title ?>
-        </span>
+          <div class="title">
+            <h3>
+                <a href="{{route('contents.show',$relation_content->id)}}">
+                  <?= $relation_content->title ?>
+                </a>
+            </h3>
+        </div>
       @endforeach
     </div>
 @endsection
