@@ -52,8 +52,30 @@ class ContentsController extends Controller
      */
     public function search(Request $request)
     {
+      // タグ検索
+      if(!empty($request->tag)){
+        $tag_records = Tag::where('name','LIKE',$request->tag)->select('content_id')->get();
+        $content_ids = [];
+        foreach ($tag_records as &$record) {
+          array_push($content_ids,$record->content_id);
+        }
+        $contents = Contents::whereIn('id', $content_ids)->paginate(10);
+      }else{
+        $contents = Contents::where('title', 'LIKE', "%" . $request->keyword . "%")->orWhere('html', 'LIKE', "%" . $request->keyword . "%")
+        ->paginate(10);
+      }
+      return view('contents.index', compact('contents'));
+    }
+
+    /**
+     * タグ検索機能
+     */
+    public function tag_search(Request $request)
+    {
         $contents = Contents::where('title', 'LIKE', "%" . $request->keyword . "%")->orWhere('html', 'LIKE', "%" . $request->keyword . "%")
             ->paginate(10);
         return view('contents.index', compact('contents'));
     }
+
+    
 }

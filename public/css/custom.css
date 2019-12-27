@@ -288,7 +288,7 @@ tr:nth-child(even) {
     /* PCの時はスマホ用ヘッダーをhide */
   }
   body .container {
-    width: 980px;
+    width: 800px;
   }
   body .post_report {
     width: 70%;

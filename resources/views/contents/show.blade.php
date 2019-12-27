@@ -11,7 +11,7 @@
             </h1>
             <span>
                 @foreach ($tags as $tag)
-                    <a href="#">#{{ $tag->name }}</a>
+                    <a href="{{route('contents.search',['tag' => $tag->name])}}">#{{ $tag->name }}</a>
                 @endforeach
             </span>
         </div>
