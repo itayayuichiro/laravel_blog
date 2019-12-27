@@ -5,9 +5,12 @@
         <div class="container">
             <h1 class="inline">
                 <? if (!empty($_GET['keyword'])){ ?>
-                「<?= $_GET['keyword'] ?>」
+                「<?= $_GET['keyword'] ?>」の検索結果
+                <? }elseif (!empty($_GET['tag'])) { ?>
+                  「#<?= $_GET['tag'] ?>」の検索結果
+                <? }else{ ?>
+                  TOPページ
                 <? } ?>
-                TOPページ
                 <span><img class="inline" src="{{ asset('/img/report.png') }}"></span>
             </h1>
         </div>
